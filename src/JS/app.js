@@ -97,8 +97,6 @@ function getVideos(){
                 + "| Genre: "+ val["Genre"] + "| Age Rating: "+ val["AgeRating"]  + "| Comments: "+ val["Comments"] + "<br />");
      items.push( "<hr />");
      items.push('<button type="button" id="deleteVideoButton" class="btn btn-danger" onclick="deleteItems(\''+val["id"]+'\')">Delete</button><br/><br/>');
-     items.push('<button type="button" id="deleteVideoButton" class="btn btn-primary" onclick="addcomment(\''+val["id"]+'\')">Add Comment</button><br/><br/>');
-
      });
      //Clear the assetlist div
      $('#VideoList').empty();
