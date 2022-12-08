@@ -131,17 +131,18 @@ span.psw {
 </head>
 <body>
 
-<h2>Login or Sign Up</h2>
 
 <div class="row align-items-start">
   <div class="col-2"  ></div>
+  
+  <h2>Login or Sign Up</h2>
 
-  <div class="col-8" style="text-align: left;border-bottom:1px solid #222222;">
+  <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+  <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Sign Up</button>
 
-<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+</div>
 
 <div id="id01" class="modal">
-  
   <form class="modal-content animate">
     <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
@@ -159,29 +160,28 @@ span.psw {
   </form>
 </div>
 
-<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Sign Up</button>
 
-  <div id="id02" class="modal">
-    <form class="modal-content animate">
-      <div class="imgcontainer">
-        <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
-      </div>
+<div id="id02" class="modal">
+  <form class="modal-content animate">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
 
-      <div class="mb-3">
-        <label for="fullname" class="form-label">Fullname</label>
-        <input type="text" id="fullname">
-      </div>
+    <div class="mb-3">
+      <label for="fullname" class="form-label">Fullname</label>
+      <input type="text" id="fullname">
+    </div>
 
-      <div class="mb-3">
-        <label for="user_name" class="form-label">Username</label>
-        <input type="text" id="user_name">
-      </div>
+    <div class="mb-3">
+      <label for="user_name" class="form-label">Username</label>
+      <input type="text" id="user_name">
+    </div>
 
-      <div class="mb-3">
-        <label for="userPassword" class="form-label">Password</label>
-        <input type="text" id="userPassword">
+    <div class="mb-3">
+      <label for="userPassword" class="form-label">Password</label>
+      <input type="text" id="userPassword">
 
-        <button type="button" id="subNewUser">Submit</button>
-      </div>
-    </form>
-  </div>
+      <button type="button" id="subNewUser">Submit</button>
+     </div>
+  </form>
+</div>
