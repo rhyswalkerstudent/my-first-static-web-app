@@ -8,13 +8,13 @@ DAI_FINISH = "?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=j
 
 CREATE_URI = "https://prod-20.centralus.logic.azure.com/workflows/c0a7d2d13ca24e5886e316edd9138fd2/triggers/manual/paths/invoke/rest/v1/assets?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=a77Ah1BJqip6_F6udo1Bd5bhdL0otMIh3TaRkw56rJ0";
 
-PUT_COMMENT = "https://prod-08.uksouth.logic.azure.com/workflows/e03f47e340cb4626aca2538a37bb424b/triggers/manual/paths/invoke/rest/v1/{id}?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=zimcMC9Yjw-OBt5PBymz6LIKFU5BelGUXifR5yJhAPo";
-
 LOGIN_CHECK = "https://prod-25.centralus.logic.azure.com:443/workflows/019747dfc1394af7939ced222a59cf2e/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=8HwrKtKoUhnWSSDVm-eSHnHYGXRVqJJUgGLqol5Ss70";
+
+CHANGE_PASS = "https://prod-14.ukwest.logic.azure.com:443/workflows/6eddb5345f7944089d0a70cf230dc404/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=BgiMx8dJPwW-MhC3968QccfEFVbbFmiGHElTbEsayXM";
+
 //LOGIN_START = "https://prod-16.centralus.logic.azure.com/workflows/e37bc8e58cf14354b14767c04a17c92a/triggers/manual/paths/invoke/rest/v1/assets/";
 //LOGIN_END = "?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=-unFg-vShzqFyXlk-mBaIE7BpNxcT7z21xiQzhR9brY";
-
-
+// PUT_COMMENT = "https://prod-08.uksouth.logic.azure.com/workflows/e03f47e340cb4626aca2538a37bb424b/triggers/manual/paths/invoke/rest/v1/{id}?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=zimcMC9Yjw-OBt5PBymz6LIKFU5BelGUXifR5yJhAPo";
 
 BLOB_ACCOUNT = "https://b00798643blob.blob.core.windows.net";
 
@@ -117,12 +117,6 @@ $.ajax({
 })
 }
 
-// function login(id){
-//   $ajax({
-//     url: LOGIN_START + id + LOGIN_END
-//   })
-// }
-
 function newuser(){
     submitUser = new FormData();
 
@@ -140,29 +134,28 @@ function newuser(){
      type: 'POST',
      success: function(data){
       window.location="./login.html";
-    
      }
      });
 }
 
-function addcomment(id){
-  submitComment = new FormData();
+// function addcomment(id){
+//   submitComment = new FormData();
 
-   submitComment.append('Comment', $('#Comment').val());
+//    submitComment.append('Comment', $('#Comment').val());
    
-   $.ajax({
-   url: PUT_COMMENT,
-   data: submitComment,
-   cache: false,
-   enctype: 'multipart/form-data',
-   contentType: false,
-   processData: false,
-   type: 'PUT ',
-   success: function(data){
+//    $.ajax({
+//    url: PUT_COMMENT,
+//    data: submitComment,
+//    cache: false,
+//    enctype: 'multipart/form-data',
+//    contentType: false,
+//    processData: false,
+//    type: 'PUT ',
+//    success: function(data){
   
-   }
-   });
-}
+//    }
+//    });
+// }
 
 function logincheck(){
   var userName = document.getElementById("username").value;
