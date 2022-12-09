@@ -10,8 +10,8 @@ CREATE_URI = "https://prod-20.centralus.logic.azure.com/workflows/c0a7d2d13ca24e
 
 LOGIN_CHECK = "https://prod-25.centralus.logic.azure.com:443/workflows/019747dfc1394af7939ced222a59cf2e/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=8HwrKtKoUhnWSSDVm-eSHnHYGXRVqJJUgGLqol5Ss70";
 
-CHANGE_PASS = "https://prod-14.ukwest.logic.azure.com:443/workflows/6eddb5345f7944089d0a70cf230dc404/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=BgiMx8dJPwW-MhC3968QccfEFVbbFmiGHElTbEsayXM";
-
+CHANGE_PASS1 = "https://prod-14.ukwest.logic.azure.com/workflows/6eddb5345f7944089d0a70cf230dc404/triggers/manual/paths/invoke/rest/v1/assets/"
+CHANGE_PASS2 = "?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=BgiMx8dJPwW-MhC3968QccfEFVbbFmiGHElTbEsayXM";
 //LOGIN_START = "https://prod-16.centralus.logic.azure.com/workflows/e37bc8e58cf14354b14767c04a17c92a/triggers/manual/paths/invoke/rest/v1/assets/";
 //LOGIN_END = "?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=-unFg-vShzqFyXlk-mBaIE7BpNxcT7z21xiQzhR9brY";
 // PUT_COMMENT = "https://prod-08.uksouth.logic.azure.com/workflows/e03f47e340cb4626aca2538a37bb424b/triggers/manual/paths/invoke/rest/v1/{id}?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=zimcMC9Yjw-OBt5PBymz6LIKFU5BelGUXifR5yJhAPo";
@@ -209,7 +209,7 @@ function updateUser(id){
      userUpdate.append('userPassword',$('#userPassword').val());
      
      $.ajax({
-     url: CHANGE_PASS,
+     url: CHANGE_PASS1 + id + CHANGE_PASS2,
      data: userUpdate,
      cache: false,
      enctype: 'multipart/form-data',
