@@ -181,6 +181,8 @@ function logincheck(){
       console.log(usersData)
       console.log(usersData[0])
 
+      sessionStorage.setItem("userID", usersData[0].userID)
+      
       username =usersData[0].username;
       fullname =usersData[0].fullname;
       userID =usersData[0].userID;
@@ -204,13 +206,13 @@ function logincheck(){
   })
 }
 
-function updateUser(id){
+function updateUser(){
     userUpdate = new FormData();
 
      userUpdate.append('userPassword',$('#userPassChange').val());
      
      $.ajax({
-     url: CHANGE_PASS1 + id + CHANGE_PASS2,
+     url: CHANGE_PASS1 + sessionStorage.getItem("userID") + CHANGE_PASS2,
      data: userUpdate,
      cache: false,
      enctype: 'multipart/form-data',
