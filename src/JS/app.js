@@ -43,11 +43,11 @@ $(document).ready(function() {
     
   });
 
-  $("#subNewComment").click(function(){
+  // $("#subNewComment").click(function(){
 
-    addcomment();
+  //   addcomment();
     
-  });
+  // });
 });
 
 //A function to submit a new asset to the REST endpoint 
@@ -201,4 +201,24 @@ function logincheck(){
       return false;
     }
   })
+}
+
+function updateUser(id){
+    userUpdate = new FormData();
+
+     userUpdate.append('userPassword',$('#userPassword').val());
+     
+     $.ajax({
+     url: CHANGE_PASS,
+     data: userUpdate,
+     cache: false,
+     enctype: 'multipart/form-data',
+     contentType: false,
+     processData: false,
+     type: 'PUT',
+     success: function(data){
+      alert("Password Updated, Please Login Again With Your New Password")
+      window.location="./login.html";
+     }
+     });
 }

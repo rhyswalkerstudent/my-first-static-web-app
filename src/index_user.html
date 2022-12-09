@@ -5,6 +5,8 @@
 
     <title>Video Site</title>
 
+
+
       <link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css">
       <script type="text/javascript" src="JS/bootstrap.js"></script>
       <script type="text/javascript" src="JS/bootstrap.bundle.min.js"></script>
@@ -29,6 +31,8 @@
             <div class="col-2"  ></div>
         </div>
 
+      <button onclick="document.getElementById('id03').style.display='block'" style="width:auto;">Change Password</button>
+
         <!-- view Asset Area-->
         <div class="row align-items-start">
             <div class="col-2"  ></div>
@@ -51,6 +55,20 @@
               </div>
             </div>
 
+            <div id="id03" class="modal">
+              <form class="modal-content animate">
+                <div class="imgcontainer">
+                  <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+                </div>
+            
+                <div class="container">
+                  <label for="userPassword"><b>Username</b></label>
+                  <input type="text" placeholder="Enter New Password" name="userPassword" id="userPassword" required>
+                    
+                  <button type="button" value="login" onclick="updateUser()">Login</button>
+                </div>
+              </form>
+            </div>
             
      </div>
   
