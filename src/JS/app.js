@@ -207,7 +207,7 @@ function logincheck(){
 function updateUser(id){
     userUpdate = new FormData();
 
-     userUpdate.append('userPassword',$('#userPassword').val());
+     userUpdate.append('userPassword',$('#userPassChange').val());
      
      $.ajax({
      url: CHANGE_PASS1 + id + CHANGE_PASS2,
