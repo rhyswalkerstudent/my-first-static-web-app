@@ -204,7 +204,7 @@ function logincheck(){
   })
 }
 
-function updateUser(){
+function updateUser(id){
     userUpdate = new FormData();
 
      userUpdate.append('userPassword',$('#userPassword').val());
