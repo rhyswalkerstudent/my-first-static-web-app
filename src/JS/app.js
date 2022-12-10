@@ -94,8 +94,7 @@ function getVideos(){
      items.push( "<hr />");
      items.push("<video controls width='320 height='240' src='"+ BLOB_ACCOUNT + val["filepath"] +"'type='video/mp4'/></video><br/>");
      items.push( "File : " + val["fileName"] + "<br />");
-     items.push( "Uploaded by: " + val["userName"] + " (user id: "+val["userID"]+") " + "<br />" + "Title: "+ val["Title"] + "| Producer: "+ val["Producer"] + "| Publisher: "+ val["Publisher"] /
-                + "| Genre: "+ val["Genre"] + "| Age Rating: "+ val["AgeRating"]  + "| Comments: "+ val["Comments"] + "<br />");
+     items.push( "Uploaded by: " + val["userName"] + " (user id: "+val["userID"]+") " + "<br />" + "Title: "+ val["Title"] + "| Producer: "+ val["Producer"] + "| Publisher: "+ val["Publisher"] + "| Genre: "+ val["Genre"] + "| Age Rating: "+ val["AgeRating"]  + "| Comments: "+ val["Comments"] + "<br />");
      items.push( "<hr />");
      items.push('<button type="button" id="deleteVideoButton" class="btn btn-danger" onclick="deleteItems(\''+val["id"]+'\')">Delete</button><br/><br/>');
      });
